@@ -1,8 +1,8 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-      <c-button left-icon="add" class="button-default focus-remove button-scale" variant="solid">Button
-            </c-button>
+      <c-button left-icon="add" variant="solid" class="button-default focus-remove button-scale">
+                Button</c-button>
   </div>
 </template>
 
@@ -16,3 +16,7 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+@import '@/scss/styles.scss'
+</style>
