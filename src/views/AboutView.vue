@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-      <c-button width="100px" class="button-default focus-remove button-scale" variant="solid">Button
+      <c-button left-icon="add" class="button-default focus-remove button-scale" variant="solid">Button
             </c-button>
   </div>
 </template>
