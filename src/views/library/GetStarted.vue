@@ -1,5 +1,5 @@
 <template>
-    <div class="test4">
+    <div class="section-header">
         <h1 class="section-header">Setup</h1>
         <h6>Install library</h6>
         <div class="code-bg">yarn add chakra-ui</div>
@@ -35,11 +35,7 @@ export default {
 </script>
 
 
-<style>
-.test4 {
-    justify-content: center;
-}
+<style lang="scss">
+@import '@/scss/styles.scss'
 </style>
-
-
 

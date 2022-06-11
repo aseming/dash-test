@@ -48,10 +48,8 @@ export default {
 </script>
 
 
-<style>
-.test5 {
-    justify-content: center;
-    margin-left: 300px;
-}
-</style>
 
+
+<style lang="scss">
+@import '@/scss/styles.scss'
+</style>

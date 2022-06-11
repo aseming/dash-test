@@ -71,3 +71,6 @@ export default {
 
 
 
+<style lang="scss">
+@import '@/scss/styles.scss'
+</style>

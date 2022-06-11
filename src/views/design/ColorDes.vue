@@ -134,4 +134,6 @@ export default {
 </script>
 
 
-<!-- is-inline bg="pink.300" :spacing="4" align="center" -->
+<style lang="scss">
+@import '@/scss/styles.scss'
+</style>
