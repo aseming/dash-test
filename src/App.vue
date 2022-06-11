@@ -1,32 +1,73 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+  <body>
+    <c-theme-provider>
+      <c-reset />
+      <div id="app">
+        <header>
+          <c-flex justify="space-between" align="center">
+            <c-flex>
+              <p class="logo">Design System</p>
+            </c-flex>
+            <c-flex marginRight="56px">
+              <span :class="['nav - router', 'button-nav', 'active', { 'nav-active': index == 0 }]"
+                @click="toggleMode(0)">Code</span>
+              <span :class="['nav - router', 'button-nav', 'active', { 'nav-active': index == 1 }]"
+                @click="toggleMode(1)">Design</span>
+            </c-flex>
+          </c-flex>
+          <c-divider class="divider-header" />
+        </header>
+        <router-view />
+      </div>
+    </c-theme-provider>
+  </body>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+<script lang="js">
+import { CThemeProvider, CReset, CDivider, CFlex } from "@chakra-ui/vue";
 
-    &.router-link-exact-active {
-      color: #42b983;
+
+export default {
+  name: "App",
+  components: {
+    CThemeProvider,
+    CReset,
+    CDivider,
+    CFlex
+  },
+  data() {
+    return {
+      index: 0
+    };
+  },
+  inject: ['$chakraColorMode', '$toggleColorMode'],
+  computed: {
+    colorMode() {
+      return this.$chakraColorMode()
+    },
+    toggleColorMode() {
+      return this.$toggleColorMode;
     }
-  }
-}
-</style>
+  },
+  methods: {
+    toggleMode(index) {
+      this.index = index;
+      if (index == 0) {
+        this.$router.push('/')
+      }
+      else {
+        this.$router.push('/des')
+      }
+    }
+  },
+  
+};
+
+
+
+</script>
+
+
+

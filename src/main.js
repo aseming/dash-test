@@ -6,7 +6,6 @@ import Chakra, { CThemeProvider, CReset } from '@chakra-ui/vue'
 import "./scss/styles.scss"
 
 Vue.use(Chakra)
-
 Vue.config.productionTip = false
 
 new Vue({
@@ -15,3 +14,29 @@ new Vue({
   store,
   render: (h) => h(CThemeProvider, [h(CReset), h(App)])
 }).$mount()
+
+
+
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { 
+faPlus, faBars, faXmark, faEnvelope, faCheck, faSearch, faTrash, faBell,
+faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faArrowDown, faArrowUp, faEllipsis, faEllipsisVertical,
+faClock, faUser, faPaperclip, faCircleInfo, faCalendarDays, faChartSimple, faHeart, faWrench
+} from '@fortawesome/free-solid-svg-icons'
+
+library.add(
+faPlus, faBars, faXmark, faEnvelope, faCheck, faSearch, faTrash, faBell,
+faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faArrowDown, faArrowUp, faEllipsis, faEllipsisVertical,
+faClock, faUser, faPaperclip, faCircleInfo, faCalendarDays, faChartSimple, faHeart, faWrench
+
+)
+
+
+import { Table } from 'buefy'
+Vue.use(Table)
+
+
