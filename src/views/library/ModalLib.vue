@@ -24,10 +24,10 @@
             <c-button class="button-primary-md" mr="3">
               Save
             </c-button>
-            <c-button class="button-scale" @click="close">Cancel</c-button>
+            <c-button class="button-primary-md" @click="close">Cancel</c-button>
           </c-modal-footer>
         </c-modal-content>
-        <c-modal-overlay class="test6" />
+        <c-modal-overlay />
       </c-modal>
     </div>
 
@@ -52,7 +52,7 @@
             <c-button class="button-primary-md" mr="3">
               Save
             </c-button>
-            <c-button class="button-scale" @click="close2">Cancel</c-button>
+            <c-button class="button-primary-md" @click="close2">Cancel</c-button>
           </c-modal-footer>
         </c-modal-content>
         <c-modal-overlay />

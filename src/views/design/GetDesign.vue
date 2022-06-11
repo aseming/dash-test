@@ -4,17 +4,17 @@
         <h6>Get Figma file</h6>
         <c-button marginTop="20px" marginBottom="32px" variant="solid" class="button-primary-md">
             Get</c-button>
-        <c-divider width="600px" marginBottom="32px" borderColor="#c7c7c7" />
+        <c-divider class="section-divider" />
 
         <h6>Use design files on Drive (icons, images, fonts etc)</h6>
         <c-button marginTop="20px" marginBottom="32px" variant="solid" class="button-primary-md">
             Open</c-button>
-        <c-divider width="600px" marginBottom="32px" borderColor="#c7c7c7" />
+        <c-divider class="section-divider" />
 
         <h6>Check BRD on Atlassian</h6>
         <c-button marginTop="20px" marginBottom="32px" variant="solid" class="button-primary-md">
             Check</c-button>
-        <c-divider width="600px" marginBottom="32px" borderColor="#c7c7c7" />
+        <c-divider class="section-divider" />
 
         <h6>Check PRD on Atlassian</h6>
         <c-button marginTop="20px" marginBottom="60px" variant="solid" class="button-primary-md">

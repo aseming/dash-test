@@ -15,7 +15,7 @@
                 @click="toggleMode(1)">Design</span>
             </c-flex>
           </c-flex>
-          <c-divider class="divider-header" />
+          <c-divider class="header-divider" />
         </header>
         <router-view />
       </div>
