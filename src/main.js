@@ -36,7 +36,5 @@ faClock, faUser, faPaperclip, faCircleInfo, faCalendarDays, faChartSimple, faHea
 )
 
 
-import { Table } from 'buefy'
-Vue.use(Table)
 
 
