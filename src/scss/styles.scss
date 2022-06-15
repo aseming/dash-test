@@ -232,8 +232,28 @@
 }
 
 
+.logo-bg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 32px;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
 
+.sidenav-search {
+  margin-inline: 32px;
+  margin-bottom: 32px;
+}
 
+.sidenav-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-inline: 32px;
+  margin-bottom: 32px;
+}
 
 
 
@@ -442,7 +462,9 @@
 
 
 
-
+.icon-color {
+  color: $icon-secondary;
+}
 
 
 
@@ -521,7 +543,7 @@ p {
 
   .container {
     overflow: auto;
-    grid-template-columns: 72px 1fr;
+    grid-template-columns: 64px 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
       "sidenav header"
@@ -536,16 +558,28 @@ p {
     gap: 8px;
     align-items: center;
     margin-block: 8px;
-    margin-inline: 16px;
+    margin-inline: 12px;
     padding: 8px;
+  }
+
+  .logo-bg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 16px;
+    margin-bottom: 32px;
+    margin-top: 32px;
   }
 
   .hide {
     visibility: hidden;
   }
 
-  .input-search {
+  .sidenav-search {
+    margin-inline: 0;
+    margin-bottom: 32px;
     visibility: hidden;
   }
+
 
 }
