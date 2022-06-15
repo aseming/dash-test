@@ -1,7 +1,9 @@
 <template>
     <div>
         <div class="content-header">
-            <h2 class="content-header">Hello</h2>
+            <h2>Hello</h2>
+            <p class="chart-text-success">+8.19%</p>
+
 
             <c-flex>
                 <c-box w="340px">
