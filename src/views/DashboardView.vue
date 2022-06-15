@@ -1,10 +1,7 @@
 <template>
     <div>
         <div class="content-header">
-            <h2 class="testp">Hello</h2>
-            <p class="chart-text-success">+8.19%</p>
-
-
+            <h2 >Hello</h2>
             <c-flex>
                 <c-box w="340px">
                     <c-input-group mx="16px">
