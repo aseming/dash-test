@@ -12,7 +12,7 @@
                     </c-input-group>
                 </c-box>
                 <div class="icon-box">
-                    <img src="@/assets/icons/System/ellipsis.vertical.svg"  />
+                    <font-awesome-icon icon="fa-solid fa-ellipsis-vertical" size="lg" />
                 </div>
             </c-flex>
         </div>
