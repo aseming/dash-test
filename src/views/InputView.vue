@@ -1,5 +1,6 @@
 <template>
     <div>
+        
         <c-input-group mx="32px" mb="32px">
             <c-input placeholder="Search" class="input-search" />
             <c-input-right-element>

@@ -4,6 +4,7 @@
             <c-grid-item col-span="2" h="10" bg="blue.300" />
             <c-grid-item col-start="4" col-end="6" h="10" bg="red.300" />
         </c-grid>
+
     </div>
 
 

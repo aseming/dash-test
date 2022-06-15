@@ -60,18 +60,6 @@
 
 .chart {
   height: 240px;
-
-
-  // .chart-icon {
-  //   display: flex;
-  //   align-items: center;
-  //   height: 32px;
-  //   width: 32px;
-  //   border: 1pt solid #30303030;
-  //   border-radius: 4px;
-  //   justify-content: center;
-  // }
-
 }
 
 .chart-visual-bg {
@@ -135,6 +123,70 @@
 
 
 
+.header-icon {
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1pt solid $stroke-default;
+
+  &:hover {
+    background-color: $stroke-default;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $button-secondary-hover;
+    background-color: $button-secondary-hover;
+  }
+
+  &:active {
+    transform: scale(.90);
+  }
+}
+
+
+
+.chart-icon {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+
+  &:hover {
+    border-radius: 8px;
+    background-color: $stroke-default;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $button-secondary-hover;
+    background-color: $button-secondary-hover;
+  }
+
+  &:active {
+    transform: scale(.90);
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -165,13 +217,13 @@
 .sidenav-button.router-link-active.router-link-exact-active {
   cursor: pointer;
   color: $main-color;
-  background-color: $hover-button-sidenav;
+  background-color: $sidenav-button-active;
   border-radius: 8px;
   font-weight: 500;
 }
 
 
-.icon-bg {
+.sidenav-icon-bg {
   width: 24px;
   height: 24px;
   display: flex;
@@ -179,29 +231,9 @@
   align-items: center;
 }
 
-.icon-box {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  border: 1pt solid $stroke-default;
-
-  &:hover {
-    background-color: $hover-button;
-  }
-}
 
 
 
-
-.size {
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  line-height: 40px;
-}
 
 
 
@@ -228,7 +260,7 @@
   font-weight: 600;
 
   &:hover {
-    background-color: $hover-button
+    background-color: $button-primary-hover
   }
 
   &:focus {
@@ -238,7 +270,7 @@
 
   &:focus-visible {
     outline: 3px solid $main-focus;
-    background-color: $hover-button
+    background-color: $button-primary-hover
   }
 
   &:active {
@@ -293,7 +325,7 @@
   font-weight: 600;
 
   &:hover {
-    color: $hover-button;
+    color: $button-primary-hover;
   }
 
   &:focus {
@@ -324,7 +356,7 @@
   font-weight: 600;
 
   &:hover {
-    background-color: $hover-button
+    background-color: $button-primary-hover
   }
 
   &:focus {
@@ -334,7 +366,7 @@
 
   &:focus-visible {
     outline: 3px solid $main-focus;
-    background-color: $hover-button
+    background-color: $button-primary-hover
   }
 
   &:active {

@@ -1,7 +1,7 @@
 <template>
     <c-flex justify="space-between" align="center" mx="32px" mb="32px" mt="32px">
-        <c-flex gap="8px">
-            <img src="@/assets/icons/System/dash.svg" />
+        <c-flex gap="16px">
+            <img src="@/assets/icons/Custom/logo.svg" />
             <div class="hide">
                 <h4>FoodGo</h4>
             </div>

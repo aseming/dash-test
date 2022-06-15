@@ -11,9 +11,17 @@
                         </c-input-right-element>
                     </c-input-group>
                 </c-box>
-                <c-div class="size">
-                    <font-awesome-icon icon="fa-solid fa-ellipsis-vertical" size="lg" />
-                </c-div>
+
+                <c-menu>
+                    <c-menu-button class="header-icon">
+                        <img src="@/assets/icons/System/ellipsis.vertical.svg" />
+                    </c-menu-button>
+                    <c-menu-list min-width="40px">
+                        <c-menu-item>Option 1</c-menu-item>
+                        <c-menu-item>Option 2</c-menu-item>
+                        <c-menu-item>Option 3</c-menu-item>
+                    </c-menu-list>
+                </c-menu>
 
             </c-flex>
         </div>
@@ -83,9 +91,16 @@
             <div class="chart-wide chart-style">
                 <div class="chart-header">
                     <h6>Table</h6>
-                    <div class="chart-icon">
-                        <font-awesome-icon icon="fa-solid fa-ellipsis-vertical" class="icon-color" size="lg" />
-                    </div>
+                    <c-menu>
+                        <c-menu-button class="chart-icon">
+                            <img src="@/assets/icons/System/ellipsis.vertical.svg" />
+                        </c-menu-button>
+                        <c-menu-list min-width="40px">
+                            <c-menu-item>Option 1</c-menu-item>
+                            <c-menu-item>Option 2</c-menu-item>
+                            <c-menu-item>Option 3</c-menu-item>
+                        </c-menu-list>
+                    </c-menu>
                 </div>
             </div>
         </div>
@@ -94,9 +109,16 @@
             <div class="chart-wide2 chart-style">
                 <div class="chart-header">
                     <h6>Chart</h6>
-                    <div class="chart-icon">
-                        <font-awesome-icon icon="fa-solid fa-ellipsis-vertical" class="icon-color" size="lg" />
-                    </div>
+                    <c-menu>
+                        <c-menu-button class="chart-icon">
+                            <img src="@/assets/icons/System/ellipsis.vertical.svg" />
+                        </c-menu-button>
+                        <c-menu-list min-width="40px">
+                            <c-menu-item>Option 1</c-menu-item>
+                            <c-menu-item>Option 2</c-menu-item>
+                            <c-menu-item>Option 3</c-menu-item>
+                        </c-menu-list>
+                    </c-menu>
                 </div>
                 <div class="chart-visual-bg">
                     <span class="chart-visual" />
@@ -106,19 +128,23 @@
             <div class="chart-wide2 chart-style">
                 <div class="chart-header">
                     <h6>Chart</h6>
-                    <div class="chart-icon">
-                        <font-awesome-icon icon="fa-solid fa-ellipsis-vertical" class="icon-color" size="lg" />
-                    </div>
+                    <c-menu>
+                        <c-menu-button class="chart-icon">
+                            <img src="@/assets/icons/System/ellipsis.vertical.svg" />
+                        </c-menu-button>
+                        <c-menu-list min-width="40px">
+                            <c-menu-item>Option 1</c-menu-item>
+                            <c-menu-item>Option 2</c-menu-item>
+                            <c-menu-item>Option 3</c-menu-item>
+                        </c-menu-list>
+                    </c-menu>
                 </div>
                 <div class="chart-visual-bg">
                     <span class="chart-visual" />
                 </div>
             </div>
-
         </div>
-
     </div>
-
 </template>
 
 <script>
@@ -128,7 +154,13 @@ import {
     CInput,
     CInputRightElement,
     CIcon,
-    CInputGroup
+    CInputGroup,
+    CMenu,
+    CMenuButton,
+    CMenuList,
+    CMenuItem,
+
+
 
 
 } from "@chakra-ui/vue";
@@ -140,7 +172,12 @@ export default {
         CInput,
         CInputRightElement,
         CIcon,
-        CInputGroup
+        CInputGroup,
+        CMenu,
+        CMenuButton,
+        CMenuList,
+        CMenuItem,
+
     }
 }
 </script>
