@@ -14,7 +14,6 @@
                         </c-input-right-element>
                     </c-input-group>
                 </c-box>
-
                 <div class="icon-box">
                     <img src="@/assets/icons/System/ellipsis.vertical.svg"  />
                 </div>
