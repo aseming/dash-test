@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="content-header">
-            <h2 >Hello</h2>
+            <h2>Hello</h2>
             <c-flex>
                 <c-box w="340px">
                     <c-input-group mx="16px">
@@ -11,9 +11,10 @@
                         </c-input-right-element>
                     </c-input-group>
                 </c-box>
-                <div class="icon-box">
+                <c-div class="size">
                     <font-awesome-icon icon="fa-solid fa-ellipsis-vertical" size="lg" />
-                </div>
+                </c-div>
+
             </c-flex>
         </div>
 
