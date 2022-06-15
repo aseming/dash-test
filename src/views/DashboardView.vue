@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="content-header">
-            <h2>Hello</h2>
+            <h2 class="content-header">Hello</h2>
 
             <c-flex>
                 <c-box w="340px">
