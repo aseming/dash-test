@@ -3,96 +3,119 @@
         <div class="content-header">
             <h2>Hello</h2>
 
-            <c-flex gap="16px">
+            <c-flex>
                 <c-box w="340px">
-                    <c-select placeholder="Jun 10, 2022 – Jun 10, 2022 | Today">
-                        <option>Option 1</option>
-                        <option>Option 2</option>
-                        <option>Option 3</option>
-                    </c-select>
+                    <c-input-group mx="16px">
+                        <c-input placeholder="Search" class="input" />
+                        <c-input-right-element>
+                            <c-icon name="chevron-down" />
+                        </c-input-right-element>
+                    </c-input-group>
                 </c-box>
-                <c-button as="a" class="button-primary-sm">
-                    Button
-                </c-button>
+
+                <div class="icon-box">
+                    <img src="@/assets/icons/System/ellipsis.vertical.svg"  />
+                </div>
             </c-flex>
         </div>
 
         <div class="content">
-            <div class="section">
-                <div class="section-header">
-                    <h6>Chart</h6>
-                    <div class="section-icon">
+            <div class="chart-style">
+                <c-flex justify="space-between">
+                    <c-flex display="block">
+                        <p class="chart-text-sub">Income</p>
+                        <h3>$5.248</h3>
+                        <p class="chart-text-success">+8.19%</p>
+                    </c-flex>
+                    <c-flex display="block">
+                        <img src="@/assets/icons/Custom/Income.svg" />
+                    </c-flex>
+                </c-flex>
+            </div>
+
+            <div class="chart-style">
+                <c-flex justify="space-between">
+                    <c-flex display="block">
+                        <p class="chart-text-sub">Orders</p>
+                        <h3>206</h3>
+                        <p class="chart-text-success">+15.21%</p>
+                    </c-flex>
+                    <c-flex display="block">
+                        <img src="@/assets/icons/Custom/Orders.svg" />
+                    </c-flex>
+                </c-flex>
+            </div>
+
+            <div class="chart-style">
+                <c-flex justify="space-between">
+                    <c-flex display="block">
+                        <p class="chart-text-sub">Vendors</p>
+                        <h3>16</h3>
+                        <c-flex gap="1">
+                            <p class="chart-text-success">+4</p>
+                            <p class="chart-text-sub">since yesterday</p>
+                        </c-flex>
+
+                    </c-flex>
+                    <c-flex display="block">
+                        <img src="@/assets/icons/Custom/Vendor.svg" />
+                    </c-flex>
+                </c-flex>
+            </div>
+
+            <div class="chart-style">
+                <c-flex justify="space-between">
+                    <c-flex display="block">
+                        <p class="chart-text-sub">Customers</p>
+                        <h3>142</h3>
+                        <c-flex gap="1">
+                            <p class="chart-text-fail">-8</p>
+                            <p class="chart-text-sub">since yesterday</p>
+                        </c-flex>
+                    </c-flex>
+                    <c-flex display="block">
+                        <img src="@/assets/icons/Custom/Customer.svg" />
+                    </c-flex>
+                </c-flex>
+            </div>
+
+
+
+            <div class="chart-wide chart-style">
+                <div class="chart-header">
+                    <h6>Table</h6>
+                    <div class="chart-icon">
                         <font-awesome-icon icon="fa-solid fa-ellipsis-vertical" class="icon-color" size="lg" />
                     </div>
                 </div>
-                <div class="section-chart">
-                    <span class="chart-visual" />
-                </div>
             </div>
-
-            <div class="section">
-                <div class="section-header">
-                    <h6>Chart</h6>
-                    <div class="section-icon">
-                        <font-awesome-icon icon="fa-solid fa-ellipsis-vertical" class="icon-color" size="lg" />
-                    </div>
-                </div>
-                <div class="section-chart">
-                    <span class="chart-visual" />
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="section-header">
-                    <h6>Chart</h6>
-                    <div class="section-icon">
-                        <font-awesome-icon icon="fa-solid fa-ellipsis-vertical" class="icon-color" size="lg" />
-                    </div>
-                </div>
-                <div class="section-chart">
-                    <span class="chart-visual" />
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="section-header">
-                    <h6>Chart</h6>
-                    <div class="section-icon">
-                        <font-awesome-icon icon="fa-solid fa-ellipsis-vertical" class="icon-color" size="lg" />
-                    </div>
-                </div>
-                <div class="section-chart">
-                    <span class="chart-visual" />
-                </div>
-            </div>
-
-            <div class="section-wide">Content5</div>
         </div>
 
         <div class="content2">
-            <div class="section-wide2">
-                <div class="section-header">
+            <div class="chart-wide2 chart-style">
+                <div class="chart-header">
                     <h6>Chart</h6>
-                    <div class="section-icon">
+                    <div class="chart-icon">
                         <font-awesome-icon icon="fa-solid fa-ellipsis-vertical" class="icon-color" size="lg" />
                     </div>
                 </div>
-                <div class="section-chart">
+                <div class="chart-visual-bg">
                     <span class="chart-visual" />
                 </div>
             </div>
 
-            <div class="section-wide2">
-                <div class="section-header">
+            <div class="chart-wide2 chart-style">
+                <div class="chart-header">
                     <h6>Chart</h6>
-                    <div class="section-icon">
+                    <div class="chart-icon">
                         <font-awesome-icon icon="fa-solid fa-ellipsis-vertical" class="icon-color" size="lg" />
                     </div>
                 </div>
-                <div class="section-chart">
+                <div class="chart-visual-bg">
                     <span class="chart-visual" />
                 </div>
             </div>
+
         </div>
 
     </div>
@@ -102,9 +125,11 @@
 <script>
 import {
     CBox,
-    CSelect,
     CFlex,
-    CButton
+    CInput,
+    CInputRightElement,
+    CIcon,
+    CInputGroup
 
 
 } from "@chakra-ui/vue";
@@ -112,9 +137,11 @@ import {
 export default {
     components: {
         CBox,
-        CSelect,
         CFlex,
-        CButton
+        CInput,
+        CInputRightElement,
+        CIcon,
+        CInputGroup
     }
 }
 </script>
