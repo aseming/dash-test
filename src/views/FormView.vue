@@ -2,7 +2,7 @@
     <div class="container-form">
 
         <div class="content-header2">
-            <h2>Form</h2>
+            <h3>Form</h3>
             <c-flex gap="16px">
                 <c-button variant="solid" class="button-primary-sm">
                     Cancel</c-button>

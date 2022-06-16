@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="content-header">
-            <h2>Table</h2>
+            <h3>Table</h3>
             <c-flex gap="16px">
                 <c-button left-icon="add" variant="solid" class="button-primary-sm">
                     Add Vendor</c-button>

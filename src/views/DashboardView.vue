@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="content-header">
-            <h2>Hello Boss</h2>
+            <h3>Hello Boss</h3>
             <c-flex>
                 <c-box w="340px">
                     <c-input-group mx="16px">
@@ -13,7 +13,7 @@
                 </c-box>
 
                 <c-menu>
-                    <c-menu-button class="header-icon">
+                    <c-menu-button class="header-icon" bg="transparent">
                         <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
                     </c-menu-button>
                     <c-menu-list min-width="40px">
@@ -92,8 +92,8 @@
                 <div class="chart-header">
                     <h6>Table</h6>
                     <c-menu>
-                        <c-menu-button class="chart-icon" bg="red.200">
-                            <font-awesome-icon icon="fas fa-ellipsis-vertical" size="lg" />
+                        <c-menu-button class="chart-icon" bg="transparent">
+                            <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
                         </c-menu-button>
                         <c-menu-list min-width="40px">
                             <c-menu-item>Option 1</c-menu-item>
@@ -110,7 +110,7 @@
                 <div class="chart-header">
                     <h6>Chart</h6>
                     <c-menu>
-                        <c-menu-button class="chart-icon">
+                        <c-menu-button class="chart-icon" bg="transparent">
                             <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
                         </c-menu-button>
                         <c-menu-list min-width="40px">
@@ -129,7 +129,7 @@
                 <div class="chart-header">
                     <h6>Chart</h6>
                     <c-menu>
-                        <c-menu-button class="chart-icon">
+                        <c-menu-button class="chart-icon" bg="transparent">
                             <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
                         </c-menu-button>
                         <c-menu-list min-width="40px">
@@ -251,7 +251,6 @@ export default {
     width: 40px;
     height: 40px;
     color: white;
-    background-color: transparent;
     border-radius: 8px;
     border: 1pt solid $stroke-default;
 
