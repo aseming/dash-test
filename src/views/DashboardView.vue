@@ -92,7 +92,7 @@
                 <div class="chart-header">
                     <h6>Table</h6>
                     <c-menu>
-                        <c-menu-button class="chart-icon">
+                        <c-menu-button class="chart-icon" bg="red.200">
                             <font-awesome-icon icon="fas fa-ellipsis-vertical" size="lg" />
                         </c-menu-button>
                         <c-menu-list min-width="40px">
@@ -279,9 +279,7 @@ export default {
 .chart-icon {
     width: 40px;
     height: 40px;
-    background-color: aqua;
     
-
     &:hover {
         border-radius: 8px;
         background-color: $icon-secondary-hover;
