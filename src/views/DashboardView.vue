@@ -279,7 +279,7 @@ export default {
 .chart-icon {
     width: 40px;
     height: 40px;
-    background-color: transparent;
+    background-color: white;
 
     &:hover {
         border-radius: 8px;

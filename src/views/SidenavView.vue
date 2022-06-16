@@ -28,13 +28,6 @@
         </div>
         <div class="hide">Form</div>
       </router-link>
-
-      <!-- <router-link class="sidenav-button active" to="/notifications">
-        <div class="sidenav-icon-bg">
-          <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
-        </div>
-        <div class="hide">Notifications</div>
-      </router-link> -->
     </c-box>
 
 

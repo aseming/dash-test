@@ -59,7 +59,7 @@ nav {
     height: 72px;
     position: fixed;
     width: 80%;
-    z-index: 1;
+    z-index: 3;
     margin-left: 257px;
     padding-inline: 32px;
     overflow: hidden;
