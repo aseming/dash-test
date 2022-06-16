@@ -1,11 +1,14 @@
 <template>
+
   <body>
     <c-theme-provider>
       <c-reset />
-
-      <div class="container">
-          <SidenavView/>
-        <router-view />
+      <div>
+        <NavbarView />
+        <div class="container">
+          <SidenavView />
+          <router-view />
+        </div>
       </div>
 
     </c-theme-provider>
@@ -16,6 +19,7 @@
 <script lang="js">
 import { CThemeProvider, CReset, } from "@chakra-ui/vue";
 import SidenavView from "./views/SidenavView.vue";
+import NavbarView from "./views/NavbarView.vue";
 
 
 export default {
@@ -23,8 +27,9 @@ export default {
   components: {
     CThemeProvider,
     CReset,
-    SidenavView
-},
+    SidenavView,
+    NavbarView
+  },
   inject: ['$chakraColorMode', '$toggleColorMode'],
   computed: {
     colorMode() {

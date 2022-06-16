@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="content-header">
-            <h2>Hello</h2>
+            <h2>Hello Boss</h2>
             <c-flex>
                 <c-box w="340px">
                     <c-input-group mx="16px">
@@ -14,7 +14,7 @@
 
                 <c-menu>
                     <c-menu-button class="header-icon">
-                        <img src="@/assets/icons/System/ellipsis.vertical.svg" />
+                        <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
                     </c-menu-button>
                     <c-menu-list min-width="40px">
                         <c-menu-item>Option 1</c-menu-item>
@@ -93,7 +93,7 @@
                     <h6>Table</h6>
                     <c-menu>
                         <c-menu-button class="chart-icon">
-                            <img src="@/assets/icons/System/ellipsis.vertical.svg" />
+                            <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
                         </c-menu-button>
                         <c-menu-list min-width="40px">
                             <c-menu-item>Option 1</c-menu-item>
@@ -111,7 +111,7 @@
                     <h6>Chart</h6>
                     <c-menu>
                         <c-menu-button class="chart-icon">
-                            <img src="@/assets/icons/System/ellipsis.vertical.svg" />
+                            <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
                         </c-menu-button>
                         <c-menu-list min-width="40px">
                             <c-menu-item>Option 1</c-menu-item>
@@ -130,7 +130,7 @@
                     <h6>Chart</h6>
                     <c-menu>
                         <c-menu-button class="chart-icon">
-                            <img src="@/assets/icons/System/ellipsis.vertical.svg" />
+                            <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
                         </c-menu-button>
                         <c-menu-list min-width="40px">
                             <c-menu-item>Option 1</c-menu-item>
@@ -165,6 +165,7 @@ import {
 
 } from "@chakra-ui/vue";
 
+
 export default {
     components: {
         CBox,
@@ -177,13 +178,128 @@ export default {
         CMenuButton,
         CMenuList,
         CMenuItem,
-
     }
 }
 </script>
 
 
 <style lang="scss">
-@import '@/scss/styles.scss'
+@import '@/scss/styles.scss';
+
+
+.chart {
+    height: 240px;
+}
+
+.chart-visual-bg {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.chart-text-success {
+    color: $success;
+    font-weight: 700;
+}
+
+.chart-text-fail {
+    color: $error;
+    font-weight: 700;
+}
+
+.chart-text-sub {
+    color: $label-secondary;
+}
+
+.chart-style {
+    border-radius: 16px;
+    padding: 24px;
+    background-color: white;
+    border: 1pt solid #f0f0f0;
+    /* -webkit-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.02);
+}
+
+
+.chart-wide {
+    grid-column: 1 / -1;
+    height: 280px;
+}
+
+
+.chart-wide2 {
+    grid-template-columns: 2fr 2fr;
+}
+
+
+.chart-visual {
+    height: 120px;
+    width: 120px;
+    background-color: gold;
+    display: inline-block;
+    border-radius: 100%;
+}
+
+
+.header-icon {
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1pt solid $stroke-default;
+
+    &:hover {
+        background-color: $icon-secondary-hover;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    &:focus-visible {
+        outline: 3px solid $button-secondary-hover;
+        background-color: $button-secondary-hover;
+    }
+
+    &:active {
+        transform: scale(.90);
+    }
+}
+
+
+
+.chart-icon {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+
+    &:hover {
+        border-radius: 8px;
+        background-color: $icon-secondary-hover;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    &:focus-visible {
+        outline: 3px solid $button-secondary-hover;
+        background-color: $button-secondary-hover;
+    }
+
+    &:active {
+        transform: scale(.90);
+    }
+
+}
 </style>
 

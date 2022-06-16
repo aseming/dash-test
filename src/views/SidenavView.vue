@@ -1,71 +1,47 @@
 <template>
-    <div class="sidenav">
+  <div class="sidenav">
 
-
-
-            <div class="logo-bg">
-                <c-flex gap="16px" justify="space-between" align="center">
-                    <img src="@/assets/icons/Custom/logo.svg" />
-                    <div class="hide">
-                        <h6>FoodGo</h6>
-                    </div>
-                </c-flex>
-                <font-awesome-icon icon="fa-solid fa-bars" />
-            </div>
-
-            <div class="sidenav-search">
-                <c-input-group>
-                    <c-input placeholder="Search" class="input-search" />
-                    <c-input-right-element>
-                        <font-awesome-icon icon="fa-solid fa-search" class="icon-color" />
-                    </c-input-right-element>
-                </c-input-group>
-            </div>
-
-            <router-link class="sidenav-button active" to="/">
-                <div class="sidenav-icon-bg">
-                    <img src="@/assets/icons/System/dash.svg" />
-
-                </div>
-                <div class="hide">Dashboard</div>
-            </router-link>
-
-            <router-link class="sidenav-button active" to="/table">
-                <div class="sidenav-icon-bg">
-                    <img src="@/assets/icons/System/table.svg" />
-                </div>
-                <div class="hide">Table</div>
-            </router-link>
-
-            <router-link class="sidenav-button active" to="/form">
-
-                <div class="sidenav-icon-bg">
-                    <img src="@/assets/icons/System/form.svg" />
-                </div>
-                <div class="hide">Form</div>
-            </router-link>
-
-            <router-link class="sidenav-button active" to="/notifications">
-                <div class="sidenav-icon-bg">
-                    <img src="@/assets/icons/System/bell.fill.svg" />
-                </div>
-                <div class="hide">Notifications</div>
-            </router-link>
-
-
-        <c-flex marginTop="130%">
-            <div class="sidenav-user">
-                <c-avatar name="Evan You" src="https://bit.ly/chakra-evan-you" w="40px" h="40px" />
-                <c-box>
-                    <c-text fontWeight="600" marginBottom="-2px">John Doe</c-text>
-                    <c-text fontSize="0.875rem">Manager</c-text>
-                </c-box>
-            </div>
-        </c-flex>
-
-
-
+    <div class="sidenav-logo-bg logo-bg">
+      <img src="@/assets/icons/Custom/logo.svg" />
+      <h4>FoodGo</h4>
     </div>
+
+    <c-box mt="64px">
+      <router-link class="sidenav-button active" to="/">
+        <div class="sidenav-icon-bg">
+          <font-awesome-icon icon="fas fa-pie-chart" class="icon-color" size="lg" />
+        </div>
+        <div class="hide">Dashboard</div>
+      </router-link>
+
+      <router-link class="sidenav-button active" to="/table">
+        <div class="sidenav-icon-bg">
+          <font-awesome-icon icon="fas fa-table-list" class="icon-color" size="lg" />
+        </div>
+        <div class="hide">Table</div>
+      </router-link>
+
+      <router-link class="sidenav-button active" to="/form">
+
+        <div class="sidenav-icon-bg">
+          <font-awesome-icon icon="fas fa-square-check" class="icon-color" size="lg" />
+        </div>
+        <div class="hide">Form</div>
+      </router-link>
+
+      <!-- <router-link class="sidenav-button active" to="/notifications">
+        <div class="sidenav-icon-bg">
+          <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
+        </div>
+        <div class="hide">Notifications</div>
+      </router-link> -->
+    </c-box>
+
+
+
+
+
+  </div>
 </template>
 
 
@@ -73,28 +49,89 @@
 <script>
 
 import {
-    CFlex,
-    CInput,
-    CInputRightElement,
-    CInputGroup,
-    CAvatar,
-    CText
+  CBox
 
 } from "@chakra-ui/vue";
 
 export default {
-    components: {
-        CFlex,
-        CInput,
-        CInputRightElement,
-        CInputGroup,
-        CAvatar,
-        CText
-    }
+  components: {
+    CBox
+  }
 }
 </script>
 
 
 <style lang="scss">
-@import '@/scss/styles.scss'
+@import '@/scss/styles.scss';
+
+
+.sidenav {
+  grid-area: sidenav;
+  background-color: white;
+  height: 100vh;
+  position: sticky;
+  top: 0px;
+  outline: 1pt solid #f0f0f0;
+}
+
+
+.sidenav-logo-bg {
+  background-color: white;
+  width: 256px;
+  height: 72px;
+  outline: 1pt solid #f0f0f0;
+  top: 0;
+}
+
+
+.sidenav-button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-block: 8px;
+  margin-inline: 32px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $icon-secondary-hover;
+    border-radius: 8px;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $main-focus;
+    border-radius: 8px;
+  }
+}
+
+.sidenav-button.router-link-active.router-link-exact-active {
+  cursor: pointer;
+  color: $main-color;
+  background-color: $sidenav-button-active;
+  border-radius: 8px;
+  font-weight: 500;
+
+  .icon-color {
+    color: $main-color;
+  }
+}
+
+
+.sidenav-icon-bg {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-bg {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 32px;
+}
 </style>

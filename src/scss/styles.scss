@@ -2,30 +2,17 @@
 
 
 
-
 .container {
   display: grid;
   height: 100vh;
-  overflow: auto;
+  overflow-y: scroll;
   grid-template-columns: 256px 1fr;
-  background-color: $background-secondary;
+  background-color: #f9f9f9;
   grid-template-rows: 1fr;
   grid-template-areas:
     "sidenav header"
     "sidenav content"
   ;
-}
-
-
-
-
-.sidenav {
-  grid-area: sidenav;
-  background-color: white;
-  height: 100vh;
-  overflow: hidden;
-  position: sticky;
-  top: 0;
 }
 
 
@@ -36,7 +23,7 @@
   margin-inline: 32px;
   align-items: center;
   height: 40px;
-  margin-top: 32px;
+  margin-top: 104px;
 }
 
 
@@ -46,7 +33,6 @@
   gap: 32px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 32px;
-
 }
 
 .content2 {
@@ -55,314 +41,11 @@
   gap: 32px;
   grid-template-columns: 2fr 2fr;
   margin: 32px;
-}
 
-
-.chart {
-  height: 240px;
-}
-
-.chart-visual-bg {
-  display: flex;
-  justify-content: center;
-  margin-top: 32px;
-}
-
-.chart-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.chart-text-success {
-  color: $success;
-  font-weight: 700;
-}
-
-.chart-text-fail {
-  color: $error;
-  font-weight: 700;
-}
-
-.chart-text-sub {
-  color: $label-secondary;
-}
-
-.chart-style {
-  border-radius: 8px;
-  padding: 24px;
-  background-color: white;
-  -webkit-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.02);
-  box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.02);
 }
 
 
 
-.chart-wide {
-  grid-column: 1 / -1;
-  height: 280px;
-}
-
-
-.chart-wide2 {
-  height: 240px;
-  grid-template-columns: 2fr 2fr;
-}
-
-
-
-.chart-visual {
-  height: 120px;
-  width: 120px;
-  background-color: gold;
-  display: inline-block;
-  border-radius: 100%;
-}
-
-
-
-
-
-.header-icon {
-  width: 40px;
-  height: 40px;
-  color: white;
-  background-color: transparent;
-  border-radius: 8px;
-  border: 1pt solid $stroke-default;
-
-  &:hover {
-    background-color: $stroke-default;
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: none;
-  }
-
-  &:focus-visible {
-    outline: 3px solid $button-secondary-hover;
-    background-color: $button-secondary-hover;
-  }
-
-  &:active {
-    transform: scale(.90);
-  }
-}
-
-
-
-.chart-icon {
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-
-  &:hover {
-    border-radius: 8px;
-    background-color: $stroke-default;
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: none;
-  }
-
-  &:focus-visible {
-    outline: 3px solid $button-secondary-hover;
-    background-color: $button-secondary-hover;
-  }
-
-  &:active {
-    transform: scale(.90);
-  }
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.sidenav-button {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin-block: 8px;
-  margin-inline: 32px;
-  padding: 8px;
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: none;
-
-  &:hover {
-    cursor: pointer;
-    background-color: #566c8220;
-    border-radius: 8px;
-  }
-
-  &:focus-visible {
-    outline: 3px solid $main-focus;
-    border-radius: 8px;
-  }
-}
-
-.sidenav-button.router-link-active.router-link-exact-active {
-  cursor: pointer;
-  color: $main-color;
-  background-color: $sidenav-button-active;
-  border-radius: 8px;
-  font-weight: 500;
-}
-
-
-.sidenav-icon-bg {
-  width: 24px;
-  height: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.logo-bg {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-inline: 32px;
-  margin-bottom: 32px;
-  margin-top: 32px;
-}
-
-.sidenav-search {
-  margin-inline: 32px;
-  margin-bottom: 32px;
-}
-
-.sidenav-user {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  margin-inline: 32px;
-  margin-bottom: 32px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* BUTTON **************************************************/
-
-
-.button-primary-md {
-  width: fit-content;
-  height: 48px;
-  padding-inline: 32px;
-  color: white;
-  background-color: $main-color;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-
-  &:hover {
-    background-color: $button-primary-hover
-  }
-
-  &:focus {
-    box-shadow: none;
-    outline: none;
-  }
-
-  &:focus-visible {
-    outline: 3px solid $main-focus;
-    background-color: $button-primary-hover
-  }
-
-  &:active {
-    transform: scale(.90);
-  }
-
-  &:disabled {
-    background-color: $main-color;
-    transform: none;
-  }
-}
-
-
-.button-outline-md {
-  width: fit-content;
-  height: 48px;
-  padding-inline: 32px;
-  color: $main-color;
-  border-color: $main-color;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-
-  &:hover {
-    color: white;
-    background-color: $main-color;
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: none;
-  }
-
-  &:focus-visible {
-    outline: 3px solid $main-focus;
-    color: white;
-    background-color: $main-color;
-  }
-
-  &:active {
-    transform: scale(.90);
-  }
-}
-
-
-
-
-.button-link {
-  width: fit-content;
-  color: $main-color;
-  font-size: 1rem;
-  font-weight: 600;
-
-  &:hover {
-    color: $button-primary-hover;
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: none;
-  }
-
-  &:focus-visible {
-    outline: 3px solid $main-focus;
-    color: white;
-    background-color: $main-color;
-  }
-
-  &:active {
-    transform: scale(.90);
-  }
-}
 
 
 .button-primary-sm {
@@ -426,12 +109,63 @@
   }
 }
 
+.button-ghost-sm {
+  width: fit-content;
+  height: 40px;
+  padding-inline: 24px;
+  color: $main-color;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  &:hover {
+    color: $main-color;
+    background-color: #0080ff20;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  &:focus-visible {
+    outline: 3px solid $main-focus;
+    color: white;
+    background-color: $main-color;
+  }
+  &:active {
+    transform: scale(.90);
+  }
+}
+
+.button-link {
+  width: fit-content;
+  color: $main-color;
+  font-size: 1rem;
+  font-weight: 600;
+  &:hover {
+    color: $button-primary-hover;
+    text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  &:focus-visible {
+    outline: 3px solid $main-focus;
+    color: white;
+    background-color: $main-color;
+  }
+  &:active {
+    transform: scale(.90);
+  }
+}
 
 
 
+.icon-color {
+  color: $secondary-color;
+}
 
 
-/* INPUT **************************************************/
+
 
 .input {
   border-radius: 8px;
@@ -439,15 +173,15 @@
   background-color: transparent;
 }
 
+
 .input-search {
+  min-width: 200px;
   border-radius: 8px;
   border: 1pt solid $stroke-default;
   background-color: transparent;
 }
 
-.input3 {
-  color: red;
-}
+
 
 
 .font-weight-label {
@@ -466,17 +200,18 @@
   color: $icon-secondary;
 }
 
+.icon-color-search {
+  color: $icon-tertiary;
+}
 
 
 
 
 
-
-
-/* FONTS **************************************************/
 
 body {
   color: #303030;
+  overflow: hidden;
 }
 
 
@@ -524,62 +259,56 @@ p {
 
 
 @media screen and (max-width: 1300px) {
+
   .content {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 
-@media screen and (max-width: 920px) {
+
+
+@media screen and (max-width: 768px) {
+
+  .sidenav {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+    padding-top: 0;
+  }
+
   .content {
     grid-template-columns: 1fr 1fr;
-
   }
 
   .content2 {
     grid-template-columns: 1fr 1fr;
-
   }
 
   .container {
     overflow: auto;
-    grid-template-columns: 64px 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
-      "sidenav header"
-      "sidenav content"
+      "nav"
+      "header"
+      "content"
     ;
   }
 
-  .sidenav-button {
-    display: block;
-    width: 40px;
-    height: 40px;
-    gap: 8px;
-    align-items: center;
-    margin-block: 8px;
-    margin-inline: 12px;
-    padding: 8px;
-  }
-
   .logo-bg {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-inline: 16px;
-    margin-bottom: 32px;
-    margin-top: 32px;
+    margin-right: 40px;
   }
 
-  .hide {
+  .nav-user-hide {
+    width: 0;
     visibility: hidden;
   }
 
-  .sidenav-search {
-    margin-inline: 0;
-    margin-bottom: 32px;
-    visibility: hidden;
+  nav {
+    width: 95.9%;
+    margin-left: 0;
   }
 
-
+ 
 }
