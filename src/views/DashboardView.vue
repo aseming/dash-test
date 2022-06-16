@@ -93,7 +93,7 @@
                     <h6>Table</h6>
                     <c-menu>
                         <c-menu-button class="chart-icon">
-                            <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
+                            <font-awesome-icon icon="fas fa-ellipsis-vertical" size="lg" />
                         </c-menu-button>
                         <c-menu-list min-width="40px">
                             <c-menu-item>Option 1</c-menu-item>
@@ -279,7 +279,8 @@ export default {
 .chart-icon {
     width: 40px;
     height: 40px;
-    background-color: white;
+    background-color: aqua;
+    
 
     &:hover {
         border-radius: 8px;
