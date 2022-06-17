@@ -29,15 +29,6 @@ export default {
     CReset,
     SidenavView,
     NavbarView
-  },
-  inject: ['$chakraColorMode', '$toggleColorMode'],
-  computed: {
-    colorMode() {
-      return this.$chakraColorMode()
-    },
-    toggleColorMode() {
-      return this.$toggleColorMode;
-    }
   }
 
 };

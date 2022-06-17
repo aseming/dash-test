@@ -1,5 +1,6 @@
 <template>
     <div>
+
         <div class="content-header">
             <h3>Hello Boss</h3>
             <c-flex>
@@ -102,6 +103,7 @@
                         </c-menu-list>
                     </c-menu>
                 </div>
+
             </div>
         </div>
 
@@ -120,8 +122,8 @@
                         </c-menu-list>
                     </c-menu>
                 </div>
-                <div class="chart-visual-bg">
-                    <span class="chart-visual" />
+                <div class="chart-flex">
+                    <BarChart />
                 </div>
             </div>
 
@@ -139,15 +141,21 @@
                         </c-menu-list>
                     </c-menu>
                 </div>
-                <div class="chart-visual-bg">
-                    <span class="chart-visual" />
-                </div>
+              <DoughnutChart />
             </div>
         </div>
+
+
+
+
     </div>
 </template>
 
 <script>
+
+import BarChart from "/src/views/BarChart.vue";
+import DoughnutChart from "/src/views/Doughnut.vue";
+
 import {
     CBox,
     CFlex,
@@ -159,11 +167,8 @@ import {
     CMenuButton,
     CMenuList,
     CMenuItem,
-
-
-
-
 } from "@chakra-ui/vue";
+
 
 
 export default {
@@ -178,6 +183,8 @@ export default {
         CMenuButton,
         CMenuList,
         CMenuItem,
+        DoughnutChart,
+        BarChart
     }
 }
 </script>
@@ -229,13 +236,16 @@ export default {
 
 .chart-wide {
     grid-column: 1 / -1;
-    height: 280px;
+    height: 100px;
 }
 
 
 .chart-wide2 {
     grid-template-columns: 2fr 2fr;
+    height: 380px;
 }
+
+
 
 
 .chart-visual {
@@ -278,7 +288,7 @@ export default {
 .chart-icon {
     width: 40px;
     height: 40px;
-    
+
     &:hover {
         border-radius: 8px;
         background-color: $icon-secondary-hover;

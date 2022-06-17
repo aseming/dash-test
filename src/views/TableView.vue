@@ -75,15 +75,13 @@
             </table>
         </c-flex>
 
-        
-
-
     </div>
 
 
 </template>
 
 <script>
+
 import {
     CFlex,
     CButton,
@@ -93,10 +91,10 @@ import {
 
 export default {
     components: {
-        CFlex,
-        CButton,
-        CCollapse,
-    },
+    CFlex,
+    CButton,
+    CCollapse,
+},
     data() {
         return {
             show: false
