@@ -15,65 +15,14 @@
             </div>
         </c-collapse>
 
+        <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
+        <div class="testk chart-style">
 
-        <c-flex>
-            <table>
-                <tr>
-                    <th class="t-default">
-                        <c-checkbox default-is-unchecked variant-color="blue"></c-checkbox>
-                    </th>
-                    <th align="center" class="t-default">Company
-                        <c-icon name="arrow-down" size="1.5em" />
-                    </th>
-                    <th class="t-default">Contact</th>
-                    <th class="t-default" width="120px">Action</th>
-                </tr>
-                <tr>
-                    <td class="t-default">
-                        <c-checkbox default-is-unchecked variant-color="blue"></c-checkbox>
-                    </td>
-                    <td class="t-default">Maria Anders</td>
-                    <td class="t-default">Maria Anders</td>
-                    <td class="t-default">
-                        <c-button size="sm" class="button-ghost-sm" variant="ghost">Button
-                        </c-button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="t-default">
-                        <c-checkbox default-is-unchecked variant-color="blue"></c-checkbox>
-                    </td>
-                    <td class="t-default">Maria Anders</td>
-                    <td class="t-default">Francisco Chang</td>
-                    <td class="t-default">
-                        <c-button size="sm" class="button-ghost-sm" variant="ghost">Button
-                        </c-button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="t-default">
-                        <c-checkbox default-is-unchecked variant-color="blue"></c-checkbox>
-                    </td>
-                    <td class="t-default">Maria Anders</td>
-                    <td class="t-default">Francisco Chang</td>
-                    <td class="t-default">
-                        <c-button size="sm" class="button-ghost-sm" variant="ghost">Button
-                        </c-button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="t-default">
-                        <c-checkbox default-is-unchecked variant-color="blue"></c-checkbox>
-                    </td>
-                    <td class="t-default">Maria Anders</td>
-                    <td class="t-default">Francisco Chang</td>
-                    <td class="t-default">
-                        <c-button size="sm" class="button-ghost-sm" variant="ghost">Button
-                        </c-button>
-                    </td>
-                </tr>
-            </table>
-        </c-flex>
+           <Table1/> 
+    
+        </div>
+
+
 
     </div>
 
@@ -89,11 +38,17 @@ import {
 
 } from "@chakra-ui/vue";
 
+
+import Table1 from "./Table1.vue";
+
+
+
 export default {
     components: {
     CFlex,
     CButton,
     CCollapse,
+    Table1
 },
     data() {
         return {
@@ -109,35 +64,10 @@ export default {
 
 
 
-
-table {
-    border-spacing: 0pt;
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #dddddd;
-    overflow: hidden;
-    margin-top: 32px;
+.testk {
+    justify-content: center;
     margin-inline: 32px;
-}
 
-
-.t-default {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 12px;
-    padding-left: 16px;
-    align-items: baseline;
-}
-
-.td-ava {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding-left: 8px;
-}
-
-
-tr:nth-child(even) {
-    background-color: #dddddd40;
 }
 
 
@@ -154,13 +84,6 @@ tr:nth-child(even) {
     background-color: white;
     border: 1pt solid #30303020;
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.03);
-}
-
-
-
-
-c-form-helper-text {
-    font-size: 0.9rem;
 }
 </style>
 

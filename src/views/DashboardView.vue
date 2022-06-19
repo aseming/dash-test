@@ -1,18 +1,15 @@
 <template>
     <div>
+        <c-button @click="chakraToggleColorMode">
+            Chakra ColorMode: {{ chakraColorMode }}
+        </c-button>
+
 
         <div class="content-header">
-            <h3>Hello Boss</h3>
-            <c-flex>
-                <c-box w="340px">
-                    <c-input-group mx="16px">
-                        <c-input placeholder="Search" class="input" />
-                        <c-input-right-element>
-                            <c-icon name="chevron-down" />
-                        </c-input-right-element>
-                    </c-input-group>
-                </c-box>
-
+            <h3>Title</h3>
+            <c-flex gap="16px">
+                <c-button left-icon="add" variant="solid" class="button-primary-sm">
+                    Add Chart</c-button>
                 <c-menu>
                     <c-menu-button class="header-icon" bg="transparent">
                         <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
@@ -28,63 +25,16 @@
         </div>
 
         <div class="content">
-            <div class="chart-style">
-                <c-flex justify="space-between">
-                    <c-flex display="block">
-                        <p class="chart-text-sub">Income</p>
-                        <h3>$5.248</h3>
-                        <p class="chart-text-success">+8.19%</p>
-                    </c-flex>
-                    <c-flex display="block">
-                        <img src="@/assets/icons/Custom/Income.svg" />
-                    </c-flex>
-                </c-flex>
+            <div class="chart-style small">
             </div>
 
-            <div class="chart-style">
-                <c-flex justify="space-between">
-                    <c-flex display="block">
-                        <p class="chart-text-sub">Orders</p>
-                        <h3>206</h3>
-                        <p class="chart-text-success">+15.21%</p>
-                    </c-flex>
-                    <c-flex display="block">
-                        <img src="@/assets/icons/Custom/Orders.svg" />
-                    </c-flex>
-                </c-flex>
+            <div class="chart-style small">
             </div>
 
-            <div class="chart-style">
-                <c-flex justify="space-between">
-                    <c-flex display="block">
-                        <p class="chart-text-sub">Vendors</p>
-                        <h3>16</h3>
-                        <c-flex gap="1">
-                            <p class="chart-text-success">+4</p>
-                            <p class="chart-text-sub">since yesterday</p>
-                        </c-flex>
-
-                    </c-flex>
-                    <c-flex display="block">
-                        <img src="@/assets/icons/Custom/Vendor.svg" />
-                    </c-flex>
-                </c-flex>
+            <div class="chart-style small">
             </div>
 
-            <div class="chart-style">
-                <c-flex justify="space-between">
-                    <c-flex display="block">
-                        <p class="chart-text-sub">Customers</p>
-                        <h3>142</h3>
-                        <c-flex gap="1">
-                            <p class="chart-text-fail">-8</p>
-                            <p class="chart-text-sub">since yesterday</p>
-                        </c-flex>
-                    </c-flex>
-                    <c-flex display="block">
-                        <img src="@/assets/icons/Custom/Customer.svg" />
-                    </c-flex>
-                </c-flex>
+            <div class="chart-style small">
             </div>
 
 
@@ -103,14 +53,32 @@
                         </c-menu-list>
                     </c-menu>
                 </div>
+                <Table1 />
+            </div>
 
+            <div class="chart-wide chart-style">
+                <div class="chart-header">
+                    <h6>Bar</h6>
+                    <c-menu>
+                        <c-menu-button class="chart-icon" bg="transparent">
+                            <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
+                        </c-menu-button>
+                        <c-menu-list min-width="40px">
+                            <c-menu-item>Option 1</c-menu-item>
+                            <c-menu-item>Option 2</c-menu-item>
+                            <c-menu-item>Option 3</c-menu-item>
+                        </c-menu-list>
+                    </c-menu>
+                </div>
+                <BarChart />
             </div>
         </div>
 
         <div class="content2">
+
             <div class="chart-wide2 chart-style">
                 <div class="chart-header">
-                    <h6>Chart</h6>
+                    <h6>Bar2</h6>
                     <c-menu>
                         <c-menu-button class="chart-icon" bg="transparent">
                             <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
@@ -122,9 +90,7 @@
                         </c-menu-list>
                     </c-menu>
                 </div>
-                <div class="chart-flex">
-                    <BarChart />
-                </div>
+                <BarChart />
             </div>
 
             <div class="chart-wide2 chart-style">
@@ -141,51 +107,66 @@
                         </c-menu-list>
                     </c-menu>
                 </div>
-              <DoughnutChart />
             </div>
+
+            <div class="chart-wide chart-style">
+                <div class="chart-header">
+                    <h6>Pie</h6>
+                    <c-menu>
+                        <c-menu-button class="chart-icon" bg="transparent">
+                            <font-awesome-icon icon="fas fa-ellipsis-vertical" class="icon-color" size="lg" />
+                        </c-menu-button>
+                        <c-menu-list min-width="40px">
+                            <c-menu-item>Option 1</c-menu-item>
+                            <c-menu-item>Option 2</c-menu-item>
+                            <c-menu-item>Option 3</c-menu-item>
+                        </c-menu-list>
+                    </c-menu>
+                </div>
+                <Doughnut />
+            </div>
+
+
         </div>
-
-
-
-
     </div>
 </template>
 
 <script>
 
-import BarChart from "/src/views/BarChart.vue";
-import DoughnutChart from "/src/views/Doughnut.vue";
 
 import {
-    CBox,
     CFlex,
-    CInput,
-    CInputRightElement,
-    CIcon,
-    CInputGroup,
     CMenu,
     CMenuButton,
     CMenuList,
     CMenuItem,
+    CButton
 } from "@chakra-ui/vue";
+
+import Table1 from "./Table1.vue";
+import BarChart from "./BarChart.vue";
+import Doughnut from "./Doughnut.vue";
 
 
 
 export default {
     components: {
-        CBox,
-        CFlex,
-        CInput,
-        CInputRightElement,
-        CIcon,
-        CInputGroup,
-        CMenu,
-        CMenuButton,
-        CMenuList,
-        CMenuItem,
-        DoughnutChart,
-        BarChart
-    }
+    CFlex,
+    CMenu,
+    CMenuButton,
+    CMenuList,
+    CMenuItem,
+    CButton,
+    Table1,
+    BarChart,
+    Doughnut
+},
+    inject: ['$chakraColorMode', '$toggleColorMode'],
+    computed: {
+        colorMode() {
+            return this.$chakraColorMode()
+        }
+    },
 }
 </script>
 
@@ -194,9 +175,7 @@ export default {
 @import '@/scss/styles.scss';
 
 
-.chart {
-    height: 240px;
-}
+
 
 .chart-visual-bg {
     display: flex;
@@ -207,22 +186,9 @@ export default {
 .chart-header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 16px;
 }
 
-
-.chart-text-success {
-    color: $success;
-    font-weight: 700;
-}
-
-.chart-text-fail {
-    color: $error;
-    font-weight: 700;
-}
-
-.chart-text-sub {
-    color: $label-secondary;
-}
 
 .chart-style {
     border-radius: 16px;
@@ -233,24 +199,26 @@ export default {
     box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.02);
 }
 
+.small {
+    height: 200px;
+}
+
 
 .chart-wide {
     grid-column: 1 / -1;
-    height: 100px;
 }
-
 
 .chart-wide2 {
-    grid-template-columns: 2fr 2fr;
-    height: 380px;
+    grid-column: 2fr 2fr;
 }
+
 
 
 
 
 .chart-visual {
-    height: 120px;
-    width: 120px;
+    height: 140px;
+    width: 140px;
     background-color: gold;
     display: inline-block;
     border-radius: 100%;

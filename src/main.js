@@ -2,7 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import Chakra, { CThemeProvider, CReset } from '@chakra-ui/vue'
+// import Chakra, { CThemeProvider, CReset } from '@chakra-ui/vue'
+import Chakra, { CThemeProvider, CColorModeProvider, CReset } from '@chakra-ui/vue'
 import "./scss/styles.scss"
 
 Vue.use(Chakra)
@@ -12,7 +13,7 @@ new Vue({
   el: '#app',
   router,
   store,
-  render: (h) => h(CThemeProvider, [h(CReset), h(App)])
+  render: (h) => h(CThemeProvider, [h(CReset), h(CColorModeProvider), h(App)])
 }).$mount()
  
 
@@ -37,6 +38,5 @@ faPieChart, faTableList, faSquareCheck,
 
 )
 
-
-
-
+import VueGoodTablePlugin from 'vue-good-table';
+Vue.use(VueGoodTablePlugin);

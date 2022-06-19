@@ -1,10 +1,18 @@
 <template>
-  <div class="sidenav">
 
-    <div class="sidenav-logo-bg logo-bg">
-      <img src="@/assets/icons/Custom/logo.svg" />
-      <h4>FoodGo</h4>
+  <div class="sidenav">
+    
+
+    <div class="sidenav-header">
+      <div class="logo-bg hide">
+        <img src="@/assets/icons/Custom/logo.svg" />
+        <h4>Logo</h4>
+      </div>
+      <div class="icon-button">
+        <font-awesome-icon icon="fas fa-bars" class="icon-color" size="lg" />
+      </div>
     </div>
+
 
     <c-box mt="64px">
       <router-link class="sidenav-button active" to="/">
@@ -20,14 +28,6 @@
         </div>
         <div class="hide">Table</div>
       </router-link>
-
-      <router-link class="sidenav-button active" to="/form">
-
-        <div class="sidenav-icon-bg">
-          <font-awesome-icon icon="fas fa-square-check" class="icon-color" size="lg" />
-        </div>
-        <div class="hide">Form</div>
-      </router-link>
     </c-box>
 
 
@@ -42,7 +42,7 @@
 <script>
 
 import {
-  CBox
+  CBox,
 
 } from "@chakra-ui/vue";
 
@@ -63,30 +63,28 @@ export default {
   background-color: white;
   height: 100vh;
   position: sticky;
-  top: 0px;
-  outline: 1pt solid #f0f0f0;
-}
-
-
-.sidenav-logo-bg {
-  background-color: white;
-  width: 256px;
-  height: 72px;
-  outline: 1pt solid #f0f0f0;
   top: 0;
+  padding-top: 34px;
+  padding-inline: 32px;
+  outline: 1pt solid #f0f0f0;
 }
 
+.sidenav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .sidenav-button {
   display: flex;
   gap: 10px;
   align-items: center;
   margin-block: 8px;
-  margin-inline: 32px;
   padding: 12px;
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
+  color: #303030;
 
   &:hover {
     cursor: pointer;
@@ -112,6 +110,23 @@ export default {
   }
 }
 
+.icon-button {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    border-radius: 50%;
+    background-color: #30303020;
+  }
+
+  &:active {
+    transform: scale(.90);
+  }
+}
+
 
 .sidenav-icon-bg {
   width: 24px;
@@ -125,6 +140,5 @@ export default {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding-left: 32px;
 }
 </style>

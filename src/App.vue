@@ -4,7 +4,6 @@
     <c-theme-provider>
       <c-reset />
       <div>
-        <NavbarView />
         <div class="container">
           <SidenavView />
           <router-view />
@@ -19,7 +18,7 @@
 <script lang="js">
 import { CThemeProvider, CReset, } from "@chakra-ui/vue";
 import SidenavView from "./views/SidenavView.vue";
-import NavbarView from "./views/NavbarView.vue";
+
 
 
 export default {
@@ -28,7 +27,6 @@ export default {
     CThemeProvider,
     CReset,
     SidenavView,
-    NavbarView
   }
 
 };
