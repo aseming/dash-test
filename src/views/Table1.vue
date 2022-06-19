@@ -16,7 +16,10 @@ import { VueGoodTable } from 'vue-good-table';
 
 
 export default {
-    VueGoodTable,
+    //VueGoodTable, 
+    components: {
+        VueGoodTable
+    },
     name: 'my-component',
     data() {
         return {
